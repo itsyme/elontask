@@ -1,0 +1,19 @@
+/* SpaceX Page */
+
+.spaceXLogo {
+    width: calc(3000px/7);
+    height: calc(818px/7);
+    margin-left: auto;
+}
+
+.background {
+    color: whitesmoke;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(10, 11, 11) 80%, whitesmoke);
+    justify-content: center;
+}
+
+.nextLaunch {
+    background-color: whitesmoke;
+    color: black;
+}
