@@ -1,0 +1,39 @@
+.container {
+    background-image: url(../public/starman.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding-top: 10px;
+    display: flex;
+}
+
+.card {
+    background-color: #121212cc;
+    color: #ffffffde;
+    border: 1px solid #ffffff99;
+    margin: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    padding: 0.75rem 2rem
+}
+
+.videoCard {
+    background-color: #121212cc;
+    color: #ffffffde;
+    border: 1px solid #ffffff99;
+    margin: 1rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem 3rem
+}
+
+.video {
+    width: calc(854px*1.1);
+    height: calc(480px*1.1);
+    border-radius: 15px;
+}
