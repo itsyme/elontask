@@ -1,19 +1,122 @@
 /* SpaceX Page */
 
-.spaceXLogo {
-    width: calc(3000px/7);
-    height: calc(818px/7);
-    margin-left: auto;
-}
-
 .background {
-    color: whitesmoke;
     height: 100vh;
-    background: linear-gradient(to bottom, rgb(10, 11, 11) 80%, whitesmoke);
+    background-color: #121212;
+    background-image: url(../public/space_background.png);
+    background-size: cover;
     justify-content: center;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, 300px);
+    padding: 5rem 15%;
+}
+
+.card {
+    background-color: #121212cc;
+    color: #ffffffde;
+    border: 1px solid #ffffff99;
+    margin: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    padding: 0.75rem 2rem
+}
+
+/* SpaceX Logo */
+
+.spaceXLogo {
+    margin-top: 30%;
+    width: calc(3000px/7.5);
+    height: calc(818px/7.5);
+}
+
+.spaceXLogoContainer {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* About Card */
+
+.about {
+    grid-column: 2 ;
+    grid-row: 2;
+}
+
+/* Location Card */
+
+.location {
+    grid-column: 3 ;
+    grid-row: 1 ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.spaceXHeadquarters {
+    height: calc(387px/2.5);
+    width: calc(580px/2.5);
+    border-radius: 10px;
+}
+
+/* Next Launch Card */
+
 .nextLaunch {
-    background-color: whitesmoke;
-    color: black;
+    grid-column: 1 ;
+    grid-row: 1 /span 2 ;
+}
+
+.nextLaunch a {
+    color: #eaeaea;
+}
+
+.nextLaunch a:hover,
+.nextLaunch a:focus,
+.nextLaunch a:active {
+  text-decoration: underline;
+}
+
+/* Other Companies Card */
+
+
+.otherCompanies {
+    grid-column: 3;
+    grid-row: 2
+}
+
+/* Scroll Bar */
+
+.scrollBar {
+    overflow-x: scroll;
+    display: inline-flex;
+    white-space: nowrap;
+    width: 250px;
+    align-content: center;
+}
+
+/* Scroll Bar Logos */
+
+.teslaLogo {
+    height: 175px;
+    width: 175px;
+    margin-left: 20px;
+}
+
+.neuralinkLogo {
+    height: calc(404px/4);
+    width: calc(1248px/4);
+    filter: invert(1);
+    margin: 0px 50px;
+    margin-top: 50px;
+}
+
+.boringCompanyLogo {
+    height: calc(575px/4);
+    width: calc(1280px/4);
+    filter: invert(1);
+
 }
