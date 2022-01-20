@@ -85,14 +85,14 @@
 
 .otherCompanies {
     grid-column: 3;
-    grid-row: 2
+    grid-row: 2;
 }
 
 /* Scroll Bar */
 
 .scrollBar {
     overflow-x: scroll;
-    display: inline-flex;
+    display: inline-block;
     white-space: nowrap;
     width: 250px;
     align-content: center;
@@ -110,13 +110,28 @@
     height: calc(404px/4);
     width: calc(1248px/4);
     filter: invert(1);
-    margin: 0px 50px;
-    margin-top: 50px;
+    margin: 0px 40px;
+    margin-bottom: 30px;
 }
 
 .boringCompanyLogo {
-    height: calc(575px/4);
-    width: calc(1280px/4);
+    height: calc(575px/5);
+    width: calc(1280px/5);
+    margin-bottom: 30px;
     filter: invert(1);
 
+}
+
+/* Logo Animations */
+
+.teslaLogo:hover,
+.neuralinkLogo:hover,
+.boringCompanyLogo:hover {
+    transform: scale(1.2);
+}
+
+.teslaLogo:active,
+.neuralinkLogo:active,
+.boringCompanyLogo:active {
+    transform: scale(1);
 }

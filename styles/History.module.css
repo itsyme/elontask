@@ -1,0 +1,46 @@
+.background {
+    background-image: url(../public/spacex_background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcomeTile {
+    background-color: #12121277;
+    color: #ffffffde;
+    width: calc(100vw/5);
+    height: calc(100vw/5);
+    padding: 2rem 2rem;
+    justify-content: center;
+    border: 1px solid #ffffff99;
+    border-radius: 5px;
+}
+
+.tile {
+    background-color: #12121277;
+    color: #ffffffde;
+    width: calc(100vw/5);
+    height: calc(100vw/5);
+    padding: 2rem 2rem;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tile:active {
+    transform: scale(1);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container a{
+    color: inherit;
+}

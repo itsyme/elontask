@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home( latestNews ) {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,29 +27,29 @@ export default function Home() {
 
           <a href="/starman" className={styles.card}>
             <h2>Where's Starman?</h2>
-            <p>Locate Elon Musk's Roadster.</p>
+            <p>Locate Elon Musk's Roadster</p>
           </a>
           <img src='/wally.png' className={styles.wally}/>
 
+          <a
+            href="/history"
+            className={styles.historyCard}
+          >
+            <h2>History</h2>
+            <p>
+              No, not your browser history
+            </p>
+          </a>
 
           <a
-            href="/rockets"
+            href="/ships"
             className={styles.card}
           >
-            <h2>SpaceX's Rockets &rarr;</h2>
+            <h2>SpaceX's Ships &rarr;</h2>
             <p className={styles.hoverText}>3..2..1..</p>
             <p className={styles.hiddenText}>Lift Off!</p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Launch History</h2>
-            <p>
-              No, not your browser history.
-            </p>
-          </a>
         </div>
       </main>
     </div>

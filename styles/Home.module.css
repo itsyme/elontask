@@ -130,6 +130,43 @@
   line-height: 1.5;
 }
 
+/* History Card */
+
+.historyCard {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 400px;
+  height: 150px
+}
+
+.historyCard:hover,
+.historyCard:focus,
+.historyCard:active {
+  color: rgba(255, 255, 255, 0.4);
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: url(../public/spacex_background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.historyCard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.historyCard p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
 /* To make Wally appear */
 
 .card:hover + .wally{visibility:visible}

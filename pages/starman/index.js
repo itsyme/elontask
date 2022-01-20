@@ -12,7 +12,10 @@ export default function starman({ starmanData }) {
                 <h1> Starman </h1>
                 <p> {starmanData.details} </p>
                 <p> Starman was launched on {formatDate(starmanData.launch_date_utc.substring(0,10))}</p>
-                <p> Starman is currently moving at {Math.round((starmanData.speed_kph + Number.EPSILON) * 100) / 100} kilometers per hour</p>
+                <p> 
+                    Starman is currently moving at {Math.round((starmanData.speed_kph + Number.EPSILON) * 100) / 100} kilometers per hour,
+                    {" " + Math.round(starmanData.earth_distance_km/1000000)} million kiometers away from Earth.
+                </p>
             </div>
             <div className={styles.videoCard}>
                 <h2> Watch Starman's Launch</h2>
