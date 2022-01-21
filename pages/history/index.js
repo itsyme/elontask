@@ -13,7 +13,7 @@ export default function history({ historyData }) {
     for (let i = historyData.length-1; i >= 0; i--) {
         if (historyData[i].links.article == null) {
             result.push(
-                <div className={styles.tile}>
+                <div className={styles.tile} key={i}>
                     <h3>{ historyData[i].title }</h3>
                     <p> { formatDate(historyData[i].event_date_utc.substring(0,10)) } </p>
                     <p> No article available </p>
@@ -22,7 +22,7 @@ export default function history({ historyData }) {
         } else {
             result.push(
             <a href={ historyData[i].links.article } target='_blank'>
-                <div className={styles.tile}>
+                <div className={styles.tile} key={i}>
                         <h3>{ historyData[i].title }</h3>
                         <p> { formatDate(historyData[i].event_date_utc.substring(0,10)) } </p>
                 </div>
