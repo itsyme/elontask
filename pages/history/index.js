@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from '../../styles/History.module.css';
 
 export default function history({ historyData }) {
@@ -31,6 +32,10 @@ export default function history({ historyData }) {
     }
     
     return (<>
+    <Head>
+        <title>SpaceX's History</title>
+        <link rel="icon" href="/favicon.png" />
+    </Head>
         <div className={styles.background}>
             <div className={styles.container}>
                 {result}

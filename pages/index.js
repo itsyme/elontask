@@ -42,10 +42,10 @@ export default function Home( latestNews ) {
           </a>
 
           <a
-            href="/ships"
+            href="/crew"
             className={styles.card}
           >
-            <h2>SpaceX's Ships &rarr;</h2>
+            <h2>SpaceX's Crew &rarr;</h2>
             <p className={styles.hoverText}>3..2..1..</p>
             <p className={styles.hiddenText}>Lift Off!</p>
           </a>
