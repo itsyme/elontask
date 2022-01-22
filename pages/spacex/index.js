@@ -35,7 +35,7 @@ export default function spaceX({ companyData, latestLaunchData }) {
                     <h2> Launch {latestLaunchData.success ? "Success!" : "Failure"}</h2>
                     <p> Date: {formatDate(latestLaunchData.date_local.substring(0,10))}</p>
                     <p> Time: {latestLaunchData.date_local.substring(11)}</p>
-                    <p><a href={`${latestLaunchData.links.webcast}`} target="_blank">View Web Cast</a></p>
+                    <p><a href={`${latestLaunchData.links.webcast}`} target="_blank" rel='noreferrer'>View Web Cast</a></p>
                 </div>
 
                 {/* Card about Elon Musk's other companies */}

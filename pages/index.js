@@ -11,11 +11,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <a href='https://twitter.com/elonmusk' target="_blank">
+        <a href='https://twitter.com/elonmusk' target="_blank" rel='noreferrer'>
           <img src="/favicon.png" className={styles.elonLogo}/>
         </a>
         <h1 className={styles.title}>
-          Welcome to <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon</a> Task
+          Welcome to <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank" rel='noreferrer'>Elon</a> Task
         </h1>
         <p className={styles.code}>A guide to Elon Musk's space exploration mission.</p>
 

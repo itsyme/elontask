@@ -9,7 +9,7 @@ export default function Crew({ crewData }) {
     for (let i = 0; i < crewData.length; i++) {
         var crew = crewData[i];
         result.push(
-            <a href={ crew.wikipedia } target='_blank'>
+            <a href={ crew.wikipedia } target='_blank' rel='noreferrer'>
                 <div className={styles.tile} key={i}>
                     <img src={`${crew.image}`} className={styles.profilePicture} alt={`Picture of ${crew.name}`}/>
                     <h2> {crew.name} </h2>

@@ -27,7 +27,7 @@ export default function history({ historyData }) {
         // If article available
         else {
             result.push(
-            <a href={ historyData[i].links.article } target='_blank'>
+            <a href={ historyData[i].links.article } target='_blank' rel='noreferrer'>
                 <div className={styles.tile} key={i}>
                         <h3>{ historyData[i].title }</h3>
                         <p> { formatDate(historyData[i].event_date_utc.substring(0,10)) } </p>
