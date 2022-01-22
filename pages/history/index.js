@@ -37,17 +37,19 @@ export default function history({ historyData }) {
         }
     }
     
-    return (<>
-    <Head>
-        <title>SpaceX's History</title>
-        <link rel="icon" href="/favicon.png" />
-    </Head>
+    return (
+    <>
+        <Head>
+            <title>SpaceX's History</title>
+            <link rel="icon" href="/favicon.png" />
+        </Head>
         <div className={styles.background}>
             <div className={styles.container}>
                 {result}
             </div>
         </div>
-    </>)
+    </>
+    )
 }
 
 // Getting data from API

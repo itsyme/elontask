@@ -20,7 +20,8 @@ export default function Crew({ crewData }) {
         )
     }
 
-    return (<>
+    return (
+    <>
         <Head>
             <title>SpaceX's Crew</title>
             <link rel="icon" href="/favicon.png" />
@@ -33,7 +34,8 @@ export default function Crew({ crewData }) {
                 {result}
             </div>
         </div>
-    </>)
+    </>
+    )
 }
 
 // Getting data from API

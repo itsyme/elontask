@@ -2,31 +2,33 @@ import Head from 'next/head';
 import styles from "../../styles/Starman.module.css";
 
 export default function starman({ starmanData }) {
-    return (<>
-        <Head>
-            <title>Locate Starman</title>
-            <link rel="icon" href="/favicon.png" />
-        </Head>
-        <div className={styles.container}>
-            
-            {/* Card containing details of Starman */}
-            <div className={styles.card}>
-                <h1> Starman </h1>
-                <p> {starmanData.details} </p>
-                <p> Starman was launched on {formatDate(starmanData.launch_date_utc.substring(0,10))}</p>
-                <p> 
-                    Starman is currently moving at {Math.round((starmanData.speed_kph + Number.EPSILON) * 100) / 100} kilometers per hour,
-                    {" " + Math.round(starmanData.earth_distance_km/1000000)} million kiometers away from Earth.
-                </p>
-            </div>
+    return (
+        <>
+            <Head>
+                <title>Locate Starman</title>
+                <link rel="icon" href="/favicon.png" />
+            </Head>
+            <div className={styles.container}>
+                
+                {/* Card containing details of Starman */}
+                <div className={styles.card}>
+                    <h1> Starman </h1>
+                    <p> {starmanData.details} </p>
+                    <p> Starman was launched on {formatDate(starmanData.launch_date_utc.substring(0,10))}</p>
+                    <p> 
+                        Starman is currently moving at {Math.round((starmanData.speed_kph + Number.EPSILON) * 100) / 100} kilometers per hour,
+                        {" " + Math.round(starmanData.earth_distance_km/1000000)} million kiometers away from Earth.
+                    </p>
+                </div>
 
-            {/* Starman's Launch Youtub Video Card */}
-            <div className={styles.videoCard}>
-                <h2> Watch Starman's Launch</h2>
-                <iframe className={styles.video} src={`https://www.youtube.com/embed/${starmanData.video.substring(17)}`} allow='fullscreen'/>
+                {/* Starman's Launch Youtub Video Card */}
+                <div className={styles.videoCard}>
+                    <h2> Watch Starman's Launch</h2>
+                    <iframe className={styles.video} src={`https://www.youtube.com/embed/${starmanData.video.substring(17)}`} allow='fullscreen'/>
+                </div>
             </div>
-        </div>
-    </>)
+        </>
+    )
 }
 
 // Get data from API
