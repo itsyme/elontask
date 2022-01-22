@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from "../../styles/SpaceX.module.css";
 
 export default function spaceX({ companyData, latestLaunchData }) {
@@ -14,7 +13,7 @@ export default function spaceX({ companyData, latestLaunchData }) {
 
                 {/* SpaceX logo */}
                 <div className={styles.spaceXLogoContainer}>
-                    <Image src="/spacex.png" className={styles.spaceXLogo}/>
+                    <img src="/spacex.png" className={styles.spaceXLogo}/>
                 </div>
 
                 {/* Card about SpaceX */}
@@ -26,7 +25,7 @@ export default function spaceX({ companyData, latestLaunchData }) {
                 {/* Card about SpaceX's Location */}
                 <div className={`${styles.location} ${styles.card}`}>
                     <h3>Headquarters</h3>
-                    <Image src="/spacex_headquarters.png" className={styles.spaceXHeadquarters} />
+                    <img src="/spacex_headquarters.png" className={styles.spaceXHeadquarters} />
                     <p> {companyData.headquarters.city}, {companyData.headquarters.address}</p>
                 </div>
 
@@ -41,16 +40,16 @@ export default function spaceX({ companyData, latestLaunchData }) {
 
                 {/* Card about Elon Musk's other companies */}
                 <div className={`${styles.otherCompanies} ${styles.card}`}>
-                    <h3>Elon's other companies:</h3>
+                    <h3>{`Elon's other companies:`}</h3>
                     <div className={styles.scrollBar}>
-                        <a href='https://www.tesla.com/' target='_blank'>
-                            <Image className={styles.teslaLogo} src='/tesla.png' />
+                        <a href='https://www.tesla.com/' target='_blank' rel='noreferrer'>
+                            <img className={styles.teslaLogo} src='/tesla.png' />
                         </a>
-                        <a href='https://neuralink.com/' target='_blank'>
-                            <Image className={styles.neuralinkLogo} src='/neuralink.png'/>
+                        <a href='https://neuralink.com/' target='_blank' rel='noreferrer'>
+                            <img className={styles.neuralinkLogo} src='/neuralink.png'/>
                         </a>
-                        <a href='https://www.boringcompany.com/' target='_blank'>
-                            <Image className={styles.boringCompanyLogo} src='boring_company.png' />
+                        <a href='https://www.boringcompany.com/' target='_blank' rel='noreferrer'>
+                            <img className={styles.boringCompanyLogo} src='boring_company.png' />
                         </a>
                     </div>
                 </div>

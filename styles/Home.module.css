@@ -86,7 +86,8 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 400px;
-  height: 150px
+  height: 150px;
+  cursor: pointer;
 }
 
 .card:hover,
@@ -117,6 +118,7 @@
   color: white;
   border-color: white;
   background-color: black;
+  cursor: pointer;
 }
 
 .spaceXCard h2 {
@@ -154,6 +156,7 @@
   background-image: url(../public/spacex_background.png);
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 .historyCard h2 {
