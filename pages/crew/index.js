@@ -2,6 +2,8 @@ import Head from 'next/head';
 import styles from '../../styles/Crew.module.css';
 
 export default function Crew({ crewData }) {
+    
+    // Generating Cards for each crew member
     const result = []
 
     for (let i = 0; i < crewData.length; i++) {
@@ -34,6 +36,7 @@ export default function Crew({ crewData }) {
     </>)
 }
 
+// Getting data from API
 export async function getStaticProps({ params }) {
     const req = await fetch('https://api.spacexdata.com/v4/crew');
     const data = await req.json();
@@ -43,6 +46,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
+// Function to capitalise first letter of status
 function capitalizeFirstLetter(status) {
     if (status == 'active') {
         return 'Active';

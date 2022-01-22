@@ -65,18 +65,18 @@
 
 /* Next Launch Card */
 
-.nextLaunch {
+.latestLaunch {
     grid-column: 1 ;
     grid-row: 1 /span 2 ;
 }
 
-.nextLaunch a {
+.latestLaunch a {
     color: #eaeaea;
 }
 
-.nextLaunch a:hover,
-.nextLaunch a:focus,
-.nextLaunch a:active {
+.latestLaunch a:hover,
+.latestLaunch a:focus,
+.latestLaunch a:active {
   text-decoration: underline;
 }
 

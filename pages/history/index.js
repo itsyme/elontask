@@ -2,8 +2,11 @@ import Head from 'next/head';
 import styles from '../../styles/History.module.css';
 
 export default function history({ historyData }) {
+
+    // Generating Tiles for each history event
     const result = [];
 
+    // Generating Tile for title
     result.push(
         <div className={styles.welcomeTile}>
             <h1> History of SpaceX</h1>
@@ -11,6 +14,7 @@ export default function history({ historyData }) {
         </div>
     )
     for (let i = historyData.length-1; i >= 0; i--) {
+        // If no article available
         if (historyData[i].links.article == null) {
             result.push(
                 <div className={styles.tile} key={i}>
@@ -19,7 +23,9 @@ export default function history({ historyData }) {
                     <p> No article available </p>
                 </div>
             )
-        } else {
+        } 
+        // If article available
+        else {
             result.push(
             <a href={ historyData[i].links.article } target='_blank'>
                 <div className={styles.tile} key={i}>
@@ -44,6 +50,7 @@ export default function history({ historyData }) {
     </>)
 }
 
+// Getting data from API
 export async function getStaticProps({ params }) {
     const req = await fetch('https://api.spacexdata.com/v4/history');
     const data = await req.json();
@@ -53,6 +60,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
+// Function to format date to an easier to read form
 function formatDate(date) {
     var month = date.substring(5,7);
     var day = date.substring(8,10);

@@ -8,6 +8,8 @@ export default function starman({ starmanData }) {
             <link rel="icon" href="/favicon.png" />
         </Head>
         <div className={styles.container}>
+            
+            {/* Card containing details of Starman */}
             <div className={styles.card}>
                 <h1> Starman </h1>
                 <p> {starmanData.details} </p>
@@ -17,6 +19,8 @@ export default function starman({ starmanData }) {
                     {" " + Math.round(starmanData.earth_distance_km/1000000)} million kiometers away from Earth.
                 </p>
             </div>
+
+            {/* Starman's Launch Youtub Video Card */}
             <div className={styles.videoCard}>
                 <h2> Watch Starman's Launch</h2>
                 <iframe className={styles.video} src={`https://www.youtube.com/embed/${starmanData.video.substring(17)}`} allow='fullscreen'/>
@@ -25,6 +29,7 @@ export default function starman({ starmanData }) {
     </>)
 }
 
+// Get data from API
 export async function getStaticProps({ params }) {
     const req = await fetch('https://api.spacexdata.com/v4/roadster');
     const data = await req.json();
@@ -35,7 +40,6 @@ export async function getStaticProps({ params }) {
 }
 
 // Function to format date to an easier to read form
-
 function formatDate(date) {
     var month = date.substring(5,7);
     var day = date.substring(8,10);
