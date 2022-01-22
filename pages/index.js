@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -23,38 +24,32 @@ export default function Home() {
         <div className={styles.grid}>
 
           {/* SpaceX Card */}
-          <a href="/spacex" className={styles.spaceXCard}>
+          <Link href="/spacex" className={styles.spaceXCard}>
             <h2>SpaceX &rarr;</h2>
             <p>Find out about SpaceX</p>
-          </a>
+          </Link>
 
           {/* Starman Card */}
-          <a href="/starman" className={styles.card}>
+          <Link href="/starman" className={styles.card}>
             <h2>Where's Starman?</h2>
             <p>Locate Elon Musk's Roadster</p>
-          </a>
+          </Link>
           <img src='/wally.png' className={styles.wally}/>
 
           {/* History Card */}
-          <a
-            href="/history"
-            className={styles.historyCard}
-          >
+          <Link href="/history" className={styles.historyCard}>
             <h2>History</h2>
             <p>
               No, not your browser history
             </p>
-          </a>
+          </Link>
 
           {/* Crew Card */}
-          <a
-            href="/crew"
-            className={styles.card}
-          >
+          <Link href="/crew" className={styles.card}>
             <h2>SpaceX's Crew &rarr;</h2>
             <p className={styles.hoverText}>3..2..1..</p>
             <p className={styles.hiddenText}>Lift Off!</p>
-          </a>
+          </Link>
 
         </div>
       </main>

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from "../../styles/SpaceX.module.css";
 
 export default function spaceX({ companyData, latestLaunchData }) {
@@ -13,7 +14,7 @@ export default function spaceX({ companyData, latestLaunchData }) {
 
                 {/* SpaceX logo */}
                 <div className={styles.spaceXLogoContainer}>
-                    <img src="/spacex.png" className={styles.spaceXLogo}/>
+                    <Image src="/spacex.png" className={styles.spaceXLogo}/>
                 </div>
 
                 {/* Card about SpaceX */}
@@ -25,7 +26,7 @@ export default function spaceX({ companyData, latestLaunchData }) {
                 {/* Card about SpaceX's Location */}
                 <div className={`${styles.location} ${styles.card}`}>
                     <h3>Headquarters</h3>
-                    <img src="/spacex_headquarters.png" className={styles.spaceXHeadquarters} />
+                    <Image src="/spacex_headquarters.png" className={styles.spaceXHeadquarters} />
                     <p> {companyData.headquarters.city}, {companyData.headquarters.address}</p>
                 </div>
 
@@ -43,13 +44,13 @@ export default function spaceX({ companyData, latestLaunchData }) {
                     <h3>Elon's other companies:</h3>
                     <div className={styles.scrollBar}>
                         <a href='https://www.tesla.com/' target='_blank'>
-                            <img className={styles.teslaLogo} src='/tesla.png' />
+                            <Image className={styles.teslaLogo} src='/tesla.png' />
                         </a>
                         <a href='https://neuralink.com/' target='_blank'>
-                            <img className={styles.neuralinkLogo} src='/neuralink.png'/>
+                            <Image className={styles.neuralinkLogo} src='/neuralink.png'/>
                         </a>
                         <a href='https://www.boringcompany.com/' target='_blank'>
-                            <img className={styles.boringCompanyLogo} src='boring_company.png' />
+                            <Image className={styles.boringCompanyLogo} src='boring_company.png' />
                         </a>
                     </div>
                 </div>

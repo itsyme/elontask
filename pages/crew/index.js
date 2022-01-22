@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../../styles/Crew.module.css';
 
 export default function Crew({ crewData }) {
@@ -11,7 +12,7 @@ export default function Crew({ crewData }) {
         result.push(
             <a href={ crew.wikipedia } target='_blank' rel='noreferrer'>
                 <div className={styles.tile} key={i}>
-                    <img src={`${crew.image}`} className={styles.profilePicture} alt={`Picture of ${crew.name}`}/>
+                    <Image src={`${crew.image}`} className={styles.profilePicture} alt={`Picture of ${crew.name}`}/>
                     <h2> {crew.name} </h2>
                     <p> Status: {" " + capitalizeFirstLetter(crew.status)}</p>
                     <p> Agency: {" " + crew.agency} </p>
