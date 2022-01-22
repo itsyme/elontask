@@ -23,12 +23,12 @@ export default function Crew({ crewData }) {
     return (
     <>
         <Head>
-            <title>SpaceX's Crew</title>
+            <title> {`SpaceX's Crew`} </title>
             <link rel="icon" href="/favicon.png" />
         </Head>
         <div className={styles.container}>
             <div className={styles.headerCard}>
-                <h2>Meet SpaceX's Crew</h2>
+                <h2> {`Meet SpaceX's Crew`} </h2>
             </div>
             <div className={styles.scrollBar}>
                 {result}

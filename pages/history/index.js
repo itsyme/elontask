@@ -9,7 +9,7 @@ export default function history({ historyData }) {
     // Generating Tile for title
     result.push(
         <div className={styles.welcomeTile}>
-            <h1> History of SpaceX</h1>
+            <h1> History of SpaceX </h1>
             <p> Click on a tile to view article </p>
         </div>
     )
@@ -40,7 +40,7 @@ export default function history({ historyData }) {
     return (
     <>
         <Head>
-            <title>SpaceX's History</title>
+            <title> {`SpaceX's History`} </title>
             <link rel="icon" href="/favicon.png" />
         </Head>
         <div className={styles.background}>

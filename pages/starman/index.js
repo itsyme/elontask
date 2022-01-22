@@ -23,7 +23,7 @@ export default function starman({ starmanData }) {
 
                 {/* Starman's Launch Youtub Video Card */}
                 <div className={styles.videoCard}>
-                    <h2> Watch Starman's Launch</h2>
+                    <h2> {`Watch Starman's Launch`} </h2>
                     <iframe className={styles.video} src={`https://www.youtube.com/embed/${starmanData.video.substring(17)}`} allow='fullscreen'/>
                 </div>
             </div>
